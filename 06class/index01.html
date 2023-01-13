@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class Person {
+            //멤버변수
+            name = "홍길동";
+            age = 20;
+            state = {a : 1};
+
+            //생성자는 JS에서 반드시 1개입니다.
+            //JS는 this키워드를 지칭하면 멤버변수가 자동생성 됩니다.
+            constructor(addr) {
+                this.addr = addr;
+            }
+            //constructor(a) {} //안됨
+
+            //함수
+            func = () => {
+                console.log("func 실행");
+            }
+        }
+
+        //객체로 새로 생성 - 허용됩니다.
+        let p = new Person();
+        console.log(p.name); //멤버변수 접근
+        console.log(p.age); //멤버변수 접근
+        console.log(p.state.a); //멤버변수 접근
+
+        p.func(); //p변수안에들어있는 함수
+
+        //객체생성 - 
+        let p2 = new Person("서울");
+        console.log(p2.addr);
+
+    </script>
+    
+</body>
+</html>
